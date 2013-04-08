@@ -13,7 +13,7 @@
 
 
 (defvar target-packages
-  '(ace-jump-mode ack-and-a-half diminish elisp-slime-nav
+  '(ace-jump-mode auto-complete ack-and-a-half diminish elisp-slime-nav
     evil evil-leader nyan-mode color-theme-sanityinc-tomorrow
     expand-region flycheck gist git-commit-mode gitconfig-mode
     gitignore-mode guru-mode helm helm-projectile magit melpa
