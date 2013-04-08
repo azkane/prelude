@@ -57,6 +57,9 @@ by Prelude.")
   "This folder stores all the automatically generated save/history-files.")
 (defvar prelude-modules-file (expand-file-name "prelude-modules.el" prelude-dir)
   "This files contains a list of modules that will be loaded by Prelude.")
+(defvar pred-core-dir (expand-file-name "pred-core" prelude-dir)
+  "Extra prelude customization, this overrides some prelude stuff, thus it cant be done
+in the personal folder")
 
 (unless (file-exists-p prelude-savefile-dir)
   (make-directory prelude-savefile-dir))
@@ -75,11 +78,13 @@ by Prelude.")
 (add-to-list 'load-path prelude-modules-dir)
 (add-to-list 'load-path prelude-vendor-dir)
 (prelude-add-subfolders-to-load-path prelude-vendor-dir)
+(add-to-list 'load-path pred-core-dir)
 
 (require 'dash)
 
 ;; the core stuff
-(require 'prelude-packages)
+;; (require 'prelude-packages)   
+(require 'pred-packages)
 (require 'prelude-ui)
 (require 'prelude-core)
 (require 'prelude-mode)
