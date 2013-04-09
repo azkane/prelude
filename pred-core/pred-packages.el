@@ -11,14 +11,13 @@
 (setq package-user-dir (expand-file-name "elpa" prelude-dir)) 
 (package-initialize)
 
-
-(defvar target-packages
+(defvar prelude-packages
   '(ace-jump-mode auto-complete ack-and-a-half diminish elisp-slime-nav
     evil evil-leader nyan-mode color-theme-sanityinc-tomorrow
     expand-region flycheck gist git-commit-mode gitconfig-mode
     gitignore-mode guru-mode helm helm-projectile magit melpa
-    rainbow-mode solarized-theme undo-tree
-    volatile-highlights yasnippet zenburn-theme)
+    rainbow-mode solarized-theme undo-tree ibuffer-vc paredit smex
+    ido-ubiquitous volatile-highlights yasnippet zenburn-theme)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
