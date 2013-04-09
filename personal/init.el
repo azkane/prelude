@@ -1,2 +1,1 @@
-;; Fix things i dont like about prelude
-
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
